@@ -1,0 +1,48 @@
+[2025-07-19T18:03:56.469+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-19T18:03:56.491+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_data_quality.run_data_quality_checks scheduled__2025-07-18T17:00:00+00:00 [queued]>
+[2025-07-19T18:03:56.500+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_data_quality.run_data_quality_checks scheduled__2025-07-18T17:00:00+00:00 [queued]>
+[2025-07-19T18:03:56.500+0000] {taskinstance.py:2856} INFO - Starting attempt 2 of 3
+[2025-07-19T18:03:56.513+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): run_data_quality_checks> on 2025-07-18 17:00:00+00:00
+[2025-07-19T18:03:56.522+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=144) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-19T18:03:56.524+0000] {standard_task_runner.py:72} INFO - Started process 146 to run task
+[2025-07-19T18:03:56.524+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'banking_data_quality', 'run_data_quality_checks', 'scheduled__2025-07-18T17:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/banking_dq_dag.py', '--cfg-path', '/tmp/tmpfpovs192']
+[2025-07-19T18:03:56.526+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask run_data_quality_checks
+[2025-07-19T18:03:56.569+0000] {task_command.py:467} INFO - Running <TaskInstance: banking_data_quality.run_data_quality_checks scheduled__2025-07-18T17:00:00+00:00 [running]> on host 2e145ce6e7b6
+[2025-07-19T18:03:56.664+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='banking_data_quality' AIRFLOW_CTX_TASK_ID='run_data_quality_checks' AIRFLOW_CTX_EXECUTION_DATE='2025-07-18T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-18T17:00:00+00:00'
+[2025-07-19T18:03:56.665+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-19T18:03:56.893+0000] {logging_mixin.py:190} INFO - 
+Data Quality Check Summary:
+[2025-07-19T18:03:56.913+0000] {logging_mixin.py:190} INFO -                  Table             Column  ... Status                       Details
+0             Customer              Email  ...   PASS                 No duplicates
+1             Customer      CCCD_Passport  ...   PASS                 No duplicates
+2          BankAccount      AccountNumber  ...   PASS                 No duplicates
+3                 Card         CardNumber  ...   PASS                 No duplicates
+4               Device  DeviceFingerprint  ...   PASS                 No duplicates
+5             Customer      CCCD_Passport  ...   PASS               All CCCDs valid
+6          BankAccount         CustomerID  ...   PASS  0 invalid foreign keys found
+7                 Card          AccountID  ...   PASS  0 invalid foreign keys found
+8   PaymentTransaction          AccountID  ...   PASS  0 invalid foreign keys found
+9   PaymentTransaction             CardID  ...   PASS  0 invalid foreign keys found
+10  PaymentTransaction         MerchantID  ...   PASS  0 invalid foreign keys found
+11  PaymentTransaction           DeviceID  ...   PASS  0 invalid foreign keys found
+12  PaymentTransaction          AuthLogID  ...   PASS  0 invalid foreign keys found
+13              Device         CustomerID  ...   PASS  0 invalid foreign keys found
+14   AuthenticationLog         CustomerID  ...   PASS  0 invalid foreign keys found
+15   AuthenticationLog           DeviceID  ...   PASS  0 invalid foreign keys found
+16   AuthenticationLog      TransactionID  ...   PASS  0 invalid foreign keys found
+17          FraudAlert         CustomerID  ...   PASS  0 invalid foreign keys found
+18          FraudAlert      TransactionID  ...   PASS  0 invalid foreign keys found
+19          FraudAlert           DeviceID  ...   PASS  0 invalid foreign keys found
+20          FraudAlert          AuthLogID  ...   PASS  0 invalid foreign keys found
+
+[21 rows x 5 columns]
+[2025-07-19T18:03:56.920+0000] {logging_mixin.py:190} INFO - checks = [{'Table': 'Customer', 'Column': 'Email', 'Check': 'Uniqueness Check', 'Status': 'PASS', 'Details': 'No duplicates'}, {'Table': 'Customer', 'Column': 'CCCD_Passport', 'Check': 'Uniqueness Check', 'Status': 'PASS', 'Details': 'No duplicates'}, {'Table': 'BankAccount', 'Column': 'AccountNumber', 'Check': 'Uniqueness Check', 'Status': 'PASS', 'Details': 'No duplicates'}, {'Table': 'Card', 'Column': 'CardNumber', 'Check': 'Uniqueness Check', 'Status': 'PASS', 'Details': 'No duplicates'}, {'Table': 'Device', 'Column': 'DeviceFingerprint', 'Check': 'Uniqueness Check', 'Status': 'PASS', 'Details': 'No duplicates'}, {'Table': 'Customer', 'Column': 'CCCD_Passport', 'Check': 'Format Check', 'Status': 'PASS', 'Details': 'All CCCDs valid'}, {'Table': 'BankAccount', 'Column': 'CustomerID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'Card', 'Column': 'AccountID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'PaymentTransaction', 'Column': 'AccountID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'PaymentTransaction', 'Column': 'CardID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'PaymentTransaction', 'Column': 'MerchantID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'PaymentTransaction', 'Column': 'DeviceID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'PaymentTransaction', 'Column': 'AuthLogID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'Device', 'Column': 'CustomerID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'AuthenticationLog', 'Column': 'CustomerID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'AuthenticationLog', 'Column': 'DeviceID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'AuthenticationLog', 'Column': 'TransactionID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'FraudAlert', 'Column': 'CustomerID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'FraudAlert', 'Column': 'TransactionID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'FraudAlert', 'Column': 'DeviceID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}, {'Table': 'FraudAlert', 'Column': 'AuthLogID', 'Check': 'Foreign Key Integrity', 'Status': 'PASS', 'Details': '0 invalid foreign keys found'}]
+[2025-07-19T18:03:56.921+0000] {logging_mixin.py:190} INFO - Data quality checks passed.
+[2025-07-19T18:03:56.921+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-19T18:03:56.930+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-19T18:03:56.930+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=banking_data_quality, task_id=run_data_quality_checks, run_id=scheduled__2025-07-18T17:00:00+00:00, execution_date=20250718T170000, start_date=20250719T180356, end_date=20250719T180356
+[2025-07-19T18:03:56.978+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-07-19T18:03:57.002+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-19T18:03:57.004+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
