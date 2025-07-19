@@ -1113,3 +1113,83 @@ File Path                            PID    Runtime      # DAGs    # Errors  Las
 /opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:17:26                       0
 ================================================================================
 [2025-07-19T18:17:56.446+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:18:16.584+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:17:56                       0
+================================================================================
+[2025-07-19T18:18:26.664+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:18:46.807+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:18:26                       0
+================================================================================
+[2025-07-19T18:18:56.902+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:19:17.065+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:18:56                       0
+================================================================================
+[2025-07-19T18:19:27.149+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:19:47.273+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:19:27                       0
+================================================================================
+[2025-07-19T18:19:57.347+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:20:17.469+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:19:57                       0
+================================================================================
+[2025-07-19T18:20:27.537+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:20:47.663+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:20:27                       0
+================================================================================
+[2025-07-19T18:20:57.741+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:21:17.865+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:20:57                       0
+================================================================================
+[2025-07-19T18:21:27.935+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:21:48.067+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.01s           2025-07-19T18:21:27                       0
+================================================================================
+[2025-07-19T18:21:58.154+0000] {manager.py:1146} ERROR - Processor for /opt/airflow/dags/banking_dq_dag.py exited with return code 1.
+[2025-07-19T18:22:18.302+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/banking_dq_dag.py                           0          -1  0.02s           2025-07-19T18:21:58                       0
+================================================================================
